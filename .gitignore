@@ -1,0 +1,13 @@
+# Generated assets folder
+public/assets/*
+
+# Node JS
+node_modules/*
+npm-debug.log
+
+# Editors and IDEs
+.idea
+.vscode
+
+# macOS stuff
+.DS_Store

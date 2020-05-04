@@ -1,0 +1,94 @@
+{
+  "name": "yeho-starter",
+  "version": "1.0.0",
+  "description": "Gulp + Webpack boilerplate made for starting all type of project",
+  "author": "Yoan Malié <hello@yoan-malie.fr> (https://yoan-malie.fr)",
+  "license": "LGPL-3.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prettier": "prettier --write \"**/*.{php,js,scss,md,json}\"",
+    "stylelint": "stylelint \"**/*.scss\" --fix",
+    "eslint": "eslint \"**/*.js\""
+  },
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.14.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
+    "require-dir": "^1.2.0",
+    "stylelint": "^13.3.3",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-order": "^4.0.0",
+    "stylelint-scss": "^3.17.1",
+    "terser-webpack-plugin": "^2.3.6"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.6",
+    "@babel/plugin-transform-runtime": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/register": "^7.9.0",
+    "@babel/runtime": "^7.9.6",
+    "@babel/runtime-corejs3": "^7.9.6",
+    "autoprefixer": "^9.7.6",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.7",
+    "core-js": "^3.6.5",
+    "cssnano": "^4.1.10",
+    "del": "^5.1.0",
+    "fancy-log": "^1.3.3",
+    "fibers": "^5.0.0",
+    "gulp": "^4.0.2",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-newer": "^1.4.0",
+    "gulp-postcss": "^8.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylelint": "^13.0.0",
+    "postcss-combine-media-query": "^1.0.1",
+    "pump": "^3.0.0",
+    "sass": "^1.26.5",
+    "vinyl-paths": "^3.0.1",
+    "webpack": "^4.43.0",
+    "webpack-stream": "^5.2.1"
+  },
+  "browserslist": [
+    "> 0.5% in US",
+    "> 0.25%",
+    "ios >= 8.1",
+    "android >= 4.4",
+    "firefox esr",
+    "not ie < 11",
+    "chrome >= 41",
+    "not OperaMini all"
+  ],
+  "prettier": {
+    "semi": false,
+    "trailingComma": "all"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{php,scss,md,json}": [
+      "prettier --write"
+    ],
+    "*.scss": [
+      "stylelint --fix"
+    ],
+    "*.js": [
+      "eslint --fix"
+    ]
+  }
+}
