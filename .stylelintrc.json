@@ -90,9 +90,9 @@
     "scss/percent-placeholder-pattern": "^[a-z]+([a-z0-9-]+[a-z0-9]+)?$",
     "scss/selector-no-redundant-nesting-selector": true,
     "selector-class-pattern": [
-      "^[a-z0-9_-]+$",
+      "^[a-zA-Z0-9_-]+$",
       {
-        "message": "Selector should be written in BEM methodologies - Valid class names: block, block_name, block-name, block__element, block--modifier, block__element--modifier"
+        "message": "Selector should be written in aBEM methodologies - Valid class names: a-block, a-blockName, a-block__element, a-block -modifier, a-block__element -modifier"
       }
     ],
     "selector-list-comma-newline-after": "always",
