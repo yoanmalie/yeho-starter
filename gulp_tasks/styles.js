@@ -60,6 +60,7 @@ function sassBuild() {
           minifyFontValues: {
             removeQuotes: false,
           },
+          colormin: false,
         },
       ],
     }),
