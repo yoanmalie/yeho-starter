@@ -5,6 +5,7 @@ import { sassBuild, sassLint, sassWatch, cssClean } from "./gulp_tasks/styles"
 import { jsBuild, jsWatch, jsClean } from "./gulp_tasks/scripts"
 import { imgBuild, imgWatch, imgClean } from "./gulp_tasks/images"
 import { fontsBuild, fontsWatch, fontsClean } from "./gulp_tasks/fonts"
+import drushCr from "./gulp_tasks/shell"
 import syncInit from "./gulp_tasks/sync"
 
 // Styles tasks
@@ -32,6 +33,10 @@ exports["fonts:watch"] = fontsWatch
 exports["fonts:clean"] = fontsClean
 exports.fonts = series(fontsClean, fontsBuild, fontsWatch)
 
+// Shell tasks
+exports["shell:drushcr"] = drushCr
+exports.shell = series(drushCr)
+
 // Sync tasks
 exports["sync:init"] = syncInit
 
@@ -53,6 +58,7 @@ exports.build = parallel(
   exports["scripts:build"],
   exports["images:build"],
   exports["fonts:build"],
+  exports["shell:drushcr"],
 )
 exports.serve = series(
   exports.build,
