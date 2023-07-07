@@ -21,7 +21,7 @@
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "require-dir": "^1.2.0",
-    "stylelint": "^13.7.2",
+    "stylelint": "^15.10.1",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "stylelint-order": "^4.1.0",
     "stylelint-scss": "^3.18.0",
